@@ -82,7 +82,7 @@ class MongoDBFormatter implements FormatterInterface
         return $this->formatArray($objectVars, $nestingLevel);
     }
 
-    protected function formatException(\Exception $exception, $nestingLevel)
+    protected function formatException(\Throwable $exception, $nestingLevel)
     {
         $formattedException = array(
             'class' => Utils::getClass($exception),
